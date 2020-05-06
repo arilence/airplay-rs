@@ -1,0 +1,24 @@
+[package]
+name = "kosmos"
+version = "0.1.0"
+authors = ["Anthony Smith"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = "0.13"
+tokio = { version = "0.2", features = ["full"] }
+plist = "1"
+
+# Crypto
+rand = "0.7.3"
+sha-1 = "0.8.2"
+# Needed our own version of srp as Apple is non-compliant to standard
+srp = { version = "0.4.3", path = "../PAKEs/srp" }
+ed25519-dalek = "1.0.0-pre.3"
+aes-gcm = "0.5.0"
+aes-ctr = "0.3.0"
+aead = "0.2.0"
+aes = "0.3.2"
+x25519-dalek = "0.6.0" # (ECDH)
